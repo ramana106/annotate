@@ -1,0 +1,130 @@
+<html>
+<link rel="stylesheet" href="home2.css">
+<!-- <body>
+<ul>
+  <li><input type="checkbox" id="cb1" name="temp" />
+    <label for="cb1"><img src="https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/2038140/2018/2/6/11517898643380-HERENOW-Women-Black-Floral-Print-Cold-Shoulder-Top-8581517898643244-1_mini.jpg" /></label>
+  </li>
+  <li><input type="checkbox" id="cb2" name="temp" />
+    <label for="cb2"><img src="https://gloimg.drlcdn.com/L/pdm-product-pic/Clothing/2016/10/20/source-img/20161020173839_11735.jpg" /></label>
+  </li>
+  <li><input type="checkbox" id="cb3" name="temp" />
+    <label for="cb3"><img src="https://img.promgirl.com/_img/PGPRODUCTS/1771859/320/red-dress-AL-60094-a.jpg" /></label>
+  </li>
+  <li><input type="checkbox" id="cb4" name="temp" />
+    <label for="cb4"><img src="https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg" /></label>
+  </li>
+  <li><input type="checkbox" id="cb5" name="temp" />
+    <label for="cb5"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/placeimg01.jpg" /></label>
+  </li>
+  <li><input type="checkbox" id="cb6" name="temp" />
+    <label for="cb6"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Jichang_Yuan.jpg/220px-Jichang_Yuan.jpg" /></label>
+  </li>
+  <li><input type="checkbox" id="cb7" name="temp" />
+    <label for="cb7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Jichang_Yuan.jpg/220px-Jichang_Yuan.jpg" /></label>
+  </li>
+  <li><input type="checkbox" id="cb8" name="temp" />
+    <label for="cb8"><img src="http://dzasv7x7a867v.cloudfront.net/product_photos/51863255/22_original.jpg" /></label>
+  </li>
+</ul>
+</body> -->
+<!-- <input id="clickMe" type="button" value="clickme" onclick="myFunction();" /> -->
+</body>
+</div>
+
+<script>
+window.onload = myFunction();
+function myFunction() {
+  var items = document.getElementsByName('temp')
+  var selectedItems = ""
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].type == 'checkbox' && items[i].checked == true)
+        selectedItems += items[i].id + "\n";
+    }
+  console.log(selectedItems)
+}
+function myFunction() {
+  dic = [
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/2038140/2018/2/6/11517898643380-HERENOW-Women-Black-Floral-Print-Cold-Shoulder-Top-8581517898643244-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/1510825/2016/9/24/11474716002931-SASSAFRAS-Women-Taupe-Solid-Regular-Top-3781474716002677-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/2085646/2017/9/6/11504678390767-HERENOW-Women-Navy-Blue-Printed-Top-5151504678390558-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/1986784/2017/7/28/11501244199882-HERENOW-Women-Blue-Printed-Top-1281501244199715-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/2472399/2018/2/21/11519197862100-SASSAFRAS-Women-Blue-Printed-A-Line-Top-6011519197861959-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/2038137/2017/12/27/11514355730135-HERENOW-Women-Blue-Printed-Cold-Shoulder-Top-1521514355729995-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/1967866/2017/8/11/11502433868416-HERENOW-Women-Peach-Coloured-Printed-Top-4021502433868194-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/1973398/2017/7/20/11500547918831-HERENOW-Women-Tops-1681500547918582-1_mini.jpg",
+    "https://assets.myntassets.com/h_240,q_90,w_180/v1/assets/images/2232816/2017/11/17/11510910513175-HERENOW-Women-Tops-4641510910513054-1_mini.jpg",
+    "https://static-mercariapp-com.akamaized.net/photos/m21786325523_1.jpg?1521316412",
+    "https://static-mercariapp-com.akamaized.net/photos/m13507559461_1.jpg?1521077414",
+    "https://static-mercariapp-com.akamaized.net/photos/m88865180728_1.jpg?1521316495",
+    "https://static-mercariapp-com.akamaized.net/photos/m37836497146_1.jpg?1517415450",
+    "https://static-mercariapp-com.akamaized.net/photos/m23434418256_1.jpg?1521227856",
+    "https://static-mercariapp-com.akamaized.net/photos/m70785852504_1.jpg?1521316466",
+    "https://static-mercariapp-com.akamaized.net/photos/m40065288181_1.jpg?1521316462",
+    "https://static-mercariapp-com.akamaized.net/photos/m22950345942_1.jpg?1521316459",
+    "https://static-mercariapp-com.akamaized.net/photos/m96177395275_1.jpg?1520373569",
+    "https://static-mercariapp-com.akamaized.net/photos/m21920217076_1.jpg?1518825821",
+    "https://static-mercariapp-com.akamaized.net/photos/m47304595668_1.jpg?1521316433",
+    "https://static-mercariapp-com.akamaized.net/photos/m52470234945_1.jpg?1518912814",
+    "https://static-mercariapp-com.akamaized.net/photos/m37317653480_1.jpg?1521316430",
+    "https://static-mercariapp-com.akamaized.net/photos/m97878969703_1.jpg?1518914576",
+    "https://static-mercariapp-com.akamaized.net/photos/m45731516982_1.jpg?1521160884",
+    "https://static-mercariapp-com.akamaized.net/photos/m44454079169_1.jpg?1521160212",
+    "https://static-mercariapp-com.akamaized.net/photos/m21786325523_1.jpg?1521316412",
+    "https://static-mercariapp-com.akamaized.net/photos/m13507559461_1.jpg?1521077414",
+    "https://static-mercariapp-com.akamaized.net/photos/m27694494623_1.jpg?1521302777",
+    "https://static-mercariapp-com.akamaized.net/photos/m520372488_1.jpg?1513461043",
+    "https://static-mercariapp-com.akamaized.net/photos/m47595862192_1.jpg?1521158148",
+    "https://static-mercariapp-com.akamaized.net/photos/m65962322480_1.jpg?1521302147",
+    "https://static-mercariapp-com.akamaized.net/photos/m59198310028_1.jpg?1517208207",
+    "https://static-mercariapp-com.akamaized.net/photos/m16765069958_1.jpg?1521316382",
+    "https://static-mercariapp-com.akamaized.net/photos/m45857663433_1.jpg?1520267311",
+    "https://static-mercariapp-com.akamaized.net/photos/m37887536944_1.jpg?1517208927",
+    "https://static-mercariapp-com.akamaized.net/photos/m33013195065_1.jpg?1521316372",
+    "https://static-mercariapp-com.akamaized.net/photos/m28277262485_1.jpg?1521316363",
+    "https://static-mercariapp-com.akamaized.net/photos/m79410058119_1.jpg?1512944040",
+    "https://static-mercariapp-com.akamaized.net/photos/m32432125097_1.jpg?1521316343",
+    "https://static-mercariapp-com.akamaized.net/photos/m74722011363_1.jpg?1521257884",
+    "https://static-mercariapp-com.akamaized.net/photos/m16411908086_1.jpg?1521316341",
+    "https://static-mercariapp-com.akamaized.net/photos/m61652914260_1.jpg?1521257871",
+    "https://static-mercariapp-com.akamaized.net/photos/m63710547336_1.jpg?1521316336",
+    "https://static-mercariapp-com.akamaized.net/photos/m87927355871_1.jpg?1521256552",
+    "https://static-mercariapp-com.akamaized.net/photos/m15648692795_1.jpg?1521256409",
+    "https://static-mercariapp-com.akamaized.net/photos/m45125357779_1.jpg?1521257907",
+    "https://static-mercariapp-com.akamaized.net/photos/m40008724482_1.jpg?1521257897",
+    "https://static-mercariapp-com.akamaized.net/photos/m63135671448_1.jpg?1521316271",
+    "https://static-mercariapp-com.akamaized.net/photos/m65888769588_1.jpg?1520052310",
+    "https://static-mercariapp-com.akamaized.net/photos/m57448465345_1.jpg?1521241942",
+    "https://static-mercariapp-com.akamaized.net/photos/m85365461275_1.jpg?1521316256",
+    "https://static-mercariapp-com.akamaized.net/photos/m61377751959_1.jpg?1521241417",
+    "https://static-mercariapp-com.akamaized.net/photos/m20088636756_1.jpg?1521316244",
+    "https://static-mercariapp-com.akamaized.net/photos/m76851558395_1.jpg?1520267297",
+    "https://static-mercariapp-com.akamaized.net/photos/m49560411377_1.jpg?1521239362"
+  ]
+  for (var i = 0; i < dic.length; i++) {
+    var ul = document.createElement("UL");
+    var li = document.createElement("LI");
+    var newCheckBox = document.createElement('input');
+    var lab = document.createElement("LABEL");
+    var img = document.createElement("IMG");
+
+    newCheckBox.type = 'checkbox';
+
+    ul.setAttribute("name", "ul"+i.toString())
+    li.setAttribute("name", "list"+i.toString())
+    newCheckBox.setAttribute("id", "cb"+i.toString())
+    newCheckBox.setAttribute("name", "checkbox"+i.toString())
+    lab.setAttribute("for", "cb"+i.toString())
+    lab.setAttribute("name", "lab"+i.toString())
+    img.setAttribute("src", dic[i]);
+
+    document.body.appendChild(ul);
+    document.getElementsByName("ul"+i.toString())[0].appendChild(li);
+    document.getElementsByName("list"+i.toString())[0].appendChild(newCheckBox);
+    document.getElementsByName("list"+i.toString())[0].appendChild(lab);
+    document.getElementsByName("lab"+i.toString())[0].appendChild(img);
+  }
+
+}
+</script>
+</html>

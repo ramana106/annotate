@@ -1,0 +1,83 @@
+<head>
+  <meta charset="utf-8" />
+  <title>Draw a rectangle!</title>
+</head>
+
+<body onload="init();">
+  <canvas id="canvas" width="800" height=1000></canvas>
+</body>
+
+<script>
+  var canvas = document.getElementById('canvas');
+  var ctx = canvas.getContext('2d');
+  var rect;
+  var drag = false;
+  var imageObj = null;
+  var rects = [];
+
+  function init() {
+    imageObj = new Image();
+    imageObj.onload = function() {
+      ctx.drawImage(imageObj, 0, 0);
+    };
+    imageObj.src = 'https://static-mercariapp-com.akamaized.net/photos/m21786325523_1.jpg?1521316412';
+    canvas.addEventListener('mousedown', mouseDown, false);
+    canvas.addEventListener('mouseup', mouseUp, false);
+    canvas.addEventListener('mousemove', mouseMove, false);
+  }
+
+  function mouseDown(e) {
+    rect = []
+    rect.startX = e.pageX - this.offsetLeft;
+    rect.startY = e.pageY - this.offsetTop;
+    drag = true;
+  }
+
+  function mouseUp() {
+    drag = false;
+    if (("w" in rect) & ("h" in rect) & (Math.abs(rect.w) > 5) & (Math.abs(rect.h) > 5)) {
+      text = pop()
+      if (text != null) {
+        console.log(text)
+        rect['category'] = text
+        rects.push(rect)
+        console.log(rects)
+      } else {
+        ctx.clearRect(0, 0, 1000, 1000);
+        ctx.drawImage(imageObj, 0, 0);
+        for (var i = 0; i < rects.length; i++) {
+          ctx.strokeRect(rects[i].startX, rects[i].startY, rects[i].w, rects[i].h);
+        }
+      }
+    } else {
+      ctx.clearRect(0, 0, 1000, 1000);
+      ctx.drawImage(imageObj, 0, 0);
+      for (var i = 0; i < rects.length; i++) {
+        ctx.strokeRect(rects[i].startX, rects[i].startY, rects[i].w, rects[i].h);
+      }
+      alert('Draw a bigger box')
+    }
+  }
+
+  function pop() {
+    var text = prompt("Enter something!", "Text");
+    return (text)
+  }
+
+  function mouseMove(e) {
+    if (drag) {
+      ctx.clearRect(0, 0, 1000, 1000);
+      ctx.drawImage(imageObj, 0, 0);
+      rect.w = (e.pageX - this.offsetLeft) - rect.startX;
+      rect.h = (e.pageY - this.offsetTop) - rect.startY;
+      ctx.strokeStyle = 'red';
+      ctx.lineWidth = 5;
+      for (var i = 0; i < rects.length; i++) {
+        ctx.strokeRect(rects[i].startX, rects[i].startY, rects[i].w, rects[i].h);
+      }
+      ctx.strokeRect(rect.startX, rect.startY, rect.w, rect.h);
+    }
+  }
+  //
+  init();
+</script>
